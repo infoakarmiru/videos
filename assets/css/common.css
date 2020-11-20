@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    /* background-color: #000011; */
+    color: #333; 
+    font-size: large;
+}
+
+audio {
+    height: 35px;
+    width: 100%;
+    max-width: 250px;
+}
+audio:focus {
+    outline: none;
+}
+a {
+    /*color: white;*/
+}
+
+.header {
+    /*max-width: 800px;*/
+    color: #dddddd;
+}
+.container {
+    max-width: 600px;
+}
+
+.xy-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-video {
+    color: white;
+    background-color: black;
+}
+hr {
+    border-top: 1px solid gray;
+}
+
+.mx-15px{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@keyframes fly-in-left {
+    0%   {left: -300px;}
+    25%  {left: 20px;}
+    75%  {left: -20px}
+    100% {left: 0px;}
+  }
+
+.fly-in-left{
+    position: relative;
+    animation-timing-function: linear;
+    animation: fly-in-left .5s;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

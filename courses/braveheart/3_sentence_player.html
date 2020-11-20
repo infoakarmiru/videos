@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ab8c7d169c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/sentence.css">
+  <link rel="stylesheet" href="/assets/css/rotating_card.css">
+
+
+  <title>The Sentence Player</title>
+</head>
+
+<body>
+  <div class="bg-dark p-2 sticky-top text-center header ">
+    <a href="/index.html" class="float-left"><i class="fas fa-home text-light"></i></a>
+    <span>Solution No.1: The Sentence Player</span>
+</div>
+
+  <div class="container">
+    <p class="text-left my-3">This is our special sentence player below. As you will see
+    you can easily go <b>back and forth</b> in the movie scene and repeat
+    only those sentences you really need to.
+</p>
+<p class="text-left my-3">Just click on the <b>"Previous Sentence"</b> or <b>"Next Sentence"</b> to
+    go back and forth, or click one of the circles <span class="demoStep"></span>
+    to jump to a given sentence. (Each circle represent an individual sentence.)
+</p>
+
+<!-- Sentence Player -->
+<script src="/assets/js/youtube.js"></script>
+<script>
+    
+    setVideoID('hIvRkjOd1f8');
+    setVideoTime(45, 5.1);
+</script>
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<div class="embed-container" style="background-color: black; ">
+    <div id="youtubePlayer"></div>
+    <div style=" position: absolute;    top: 0; left: 0; width: 100%; height: 30%;"></div>
+    <div style=" position: absolute; bottom: 0; left: 0; width: 100%; height: 30%;"></div>
+</div>
+
+
+<!-- One "tab" for each step in the form: -->
+<!-- data-start and data-len contains playing times for each tab -->
+
+<div class="tab" data-start="45" data-len="5.1"></div>
+
+<div class="tab" data-start="50" data-len="2.2"></div>
+
+<div class="tab" data-start="52" data-len="2.2"></div>
+
+<div class="tab" data-start="54" data-len="3"></div>
+
+<div class="tab" data-start="57" data-len="8.5"></div>
+
+<div class="tab" data-start="67" data-len="2"></div>
+
+<div class="tab" data-start="70" data-len="9"></div>
+
+<div class="tab" data-start="81" data-len="8"></div>
+
+<div class="tab" data-start="91" data-len="2.3"></div>
+
+<div class="tab" data-start="95" data-len="1.8"></div>
+
+<div class="tab" data-start="99" data-len="7"></div>
+
+<div class="tab" data-start="106" data-len="9"></div>
+
+<div class="tab" data-start="118" data-len="3.5"></div>
+
+<div class="tab" data-start="122" data-len="5.5"></div>
+
+<div class="tab" data-start="128" data-len="6"></div>
+
+<div class="tab" data-start="134" data-len="13"></div>
+
+
+
+<!-- Circles which indicates the steps of the form: -->
+<div class="text-center my-3 overflow-hidden" style="white-space: nowrap;">
+    
+    <span class="step" onclick="jumpTab(0);
+                    nextVideo(45, 5.1);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(1);
+                    nextVideo(50, 2.2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(2);
+                    nextVideo(52, 2.2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(3);
+                    nextVideo(54, 3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(4);
+                    nextVideo(57, 8.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(5);
+                    nextVideo(67, 2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(6);
+                    nextVideo(70, 9);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(7);
+                    nextVideo(81, 8);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(8);
+                    nextVideo(91, 2.3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(9);
+                    nextVideo(95, 1.8);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(10);
+                    nextVideo(99, 7);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(11);
+                    nextVideo(106, 9);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(12);
+                    nextVideo(118, 3.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(13);
+                    nextVideo(122, 5.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(14);
+                    nextVideo(128, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(15);
+                    nextVideo(134, 13);">
+    </span>
+    
+</div>
+
+
+<!-- Prev-next and repeat buttons: -->
+<div class="mb-5 d-flex justify-content-between">
+    <a class="btn btn-primary" id="prevBtn" onclick="nextPrev(-1)">
+        <i class="fas fa-angle-double-left"></i>
+        Previous <span class="d-none d-sm-inline">Sentence</span>
+    </a>
+    <a class="btn btn-primary" onclick="player.playVideo()">
+        <i class="fas fa-redo-alt"></i>
+        Repeat <span class="d-none d-sm-inline">Sentence</span>
+    </a>
+    <a class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">
+        Next <span class="d-none d-sm-inline">Sentence</span>
+        <i class="fas fa-angle-double-right"></i>
+    </a>
+</div>
+
+
+<hr>
+<p class="text-left my-3">
+    This single innovation, the Sentence Player&reg; deserves Nobel Prize in itself 🏆, don't you think? 😀</p>
+
+<p class="text-left my-3 font-italic">
+    Why on earth nobody else has invented it yet? Who knows?</p>
+
+<p class="text-left my-3">
+    The Sentence Player is the Alpha and &Omega; of learning from original movies.
+    It is the basis of the many-many other tools we'll use later on.
+</p>
+<p class="text-left my-3">
+    Now we'have solved a very big problem. <i>Yeah!</i> But there are other problems
+    to solve .</p>
+
+<p class="bg-danger text-light text-center px-5 py-3 my-5 rounded">
+    <b>Problem No.2: </b><br> If you do not understand one of the words*, you are lost.
+    Inaccurate original subtitles will not help either.
+</p>
+
+<p class="text-left my-3">Well, that is a though one, but we can help here again. How?
+    By adding another tool for to use: <b>INTERACTIVE WORD CARDS</b>.
+</p>
+
+<a href="4_word_cards.html" class="btn  btn-primary my-3">Add Word Cards</a>
+
+<hr>
+<small>
+    <p class="text-left my-3 font-italic">*We <b>do not</b> show full subtitles yet, to let your <b>brain</b> 🧠
+        try to solve the problem using the voices only first, because this is the <b>strongest
+            learning method</b>.
+    </p>
+    <p class="text-left my-3 font-italic">
+        (Don't panic 😱: we'll add the text back in several clever small steps later on.)
+
+    </p>
+</small>
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="/assets/js/sentence.js"></script>
+  <script src="/assets/js/rotating_card.js"></script>
+
+</body>
+
+</html>

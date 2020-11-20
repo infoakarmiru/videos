@@ -1,0 +1,39 @@
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  
+  /* Van egy plusz bogyó a szövegben, de az nem lehet a step class, mert akkor az is irányít :-)
+   ezért ő a DemoStep classt kapja */
+  .demoStep {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: green;
+  }
