@@ -56,7 +56,7 @@
   <title>Editor</title>
 </head>
 
-<body class="d-flex flex-column" style="height: 100vh;">
+<body class="d-flex flex-column" style="height: 100vh">
   <div class="bg-dark p-2 sticky-top text-center header ">
     <a href="index.html" class="float-left"><i class="fas fa-home text-light"></i></a>
     <span>Editor</span>
@@ -64,9 +64,10 @@
 
   <div class="d-flex align-items-center text-left container" style="height: 90vh">
   <div class="w-100">
-    <div class="d-flex justify-content-center align-items-baseline flex-wrap">
-      <input type="text" id="YVideo" class="m-1 flex-grow-1" placeholder="YouTube link">
-      <button id="YButton" class="btn btn-primary m-2" onclick="loadVideo()">Edit video</button>
+    <p class="my-2">Paste the YouTube link of the video here:</p>
+    <div class="my-3 d-flex justify-content-between align-items-baseline">
+      <input type="text" id="YVideo" class="mx-1 flex-grow-1">
+      <button id="YButton" class="btn btn-primary" onclick="loadVideo()">Edit video</button>
     </div>
   </div>
 </div>
