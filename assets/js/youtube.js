@@ -9,10 +9,12 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 var videoID;
-var start;
+var startSec;
 var stopTimer;
 var playVideo=false;
 var playerReady=false;
+var timerDone = false;
+var timerObject;
 
 
 
@@ -63,7 +65,10 @@ function onPlayerReady(event) {
 var timerDone = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !timerDone) {
-        setTimeout(function(){ restartVideo(false); }, stopTimer);
+        if (typeof timerObject !== "undefined") {
+            clearTimeout(timerObject);
+        }
+        timerObject=setTimeout(function(){ restartVideo(false); }, stopTimer);
         timerDone = true;
     }
     if (event.data == YT.PlayerState.PAUSED) {

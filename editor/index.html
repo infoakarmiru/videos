@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center text-left container" style="height: 90vh">
+  <div class="w-100">
+    <p class="my-2">Paste the YouTube link of the video here:</p>
+    <div class="my-3 d-flex justify-content-between align-items-baseline">
+      <input type="text" id="YVideo" class="mx-1 flex-grow-1">
+      <button id="YButton" class="btn btn-primary" onclick="loadVideo()">Edit video</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function loadVideo() {
+    var url = new URL(document.getElementById("YVideo").value);
+    var params = new URLSearchParams(url.search);
+    var v = params.get('v');
+    if (v) {
+      window.location.href = "editor.html?v=" + v;
+    }
+  }
+</script>
