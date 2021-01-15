@@ -68,7 +68,7 @@ function readFireSaveFile() {
     docRef.get().then(function (docFire) {
         if (docFire.exists) {
             console.log("Document data:", docFire.data());
-            download(JSON.stringify(docFire.data()), docFire.data().fileName + '.txt', 'text/plain');
+            download(JSON.stringify(docFire.data()), docFire.data().fileName + '.json', 'text/plain');
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
