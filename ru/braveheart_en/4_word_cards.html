@@ -1,0 +1,921 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ab8c7d169c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/sentence.css">
+  <link rel="stylesheet" href="../../assets/css/rotating_card.css">
+
+
+  <title>Interactive Word Cards</title>
+</head>
+
+<body>
+  <div class="bg-dark p-2 sticky-top text-center header ">
+    <a href="index.html" class="float-left"><i class="fas fa-home text-light"></i></a>
+    <span>Solution No.2: Interactive Word Cards</span>
+</div>
+
+  <div class="container">
+    <p class="text-left my-3">We have a <b>word cards add-on</b> to the brilliant Sentence
+    Player. Use the turning cards below the video to unhide only
+    <b>those words</b> or expressions that you <b>really need</b>.
+</p>
+
+<p class="text-left my-3">Don't turn them all, if not necessary. It <b>helps your brain</b>
+    🧠 to learn from voices mostly - until it is possible.
+</p>
+
+<!-- Sentence Player -->
+<script src="../../assets/js/youtube.js"></script>
+<script>
+    
+    
+    
+    setVideoID('hIvRkjOd1f8');
+    setVideoTime(45, 5.1);
+</script>
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<div class="embed-container" style="background-color: black; ">
+    <div id="youtubePlayer"></div>
+    <div style=" position: absolute;    top: 0; left: 0; width: 100%; height: 30%;"></div>
+    <div style=" position: absolute; bottom: 0; left: 0; width: 100%; height: 30%;"></div>
+</div>
+
+
+<!-- One "tab" for each step in the form: -->
+<!-- data-start and data-len contains playing times for each tab -->
+<audio id="ding">
+    <source src="../../assets/audio/bubble.mp3">
+</audio>
+
+
+
+
+
+<div class="tab" data-start="45" data-len="5.1">
+    <div class="pb-3 flipcards">
+        <div  class="fly-in-left"  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Sons</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">of</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Scotland!</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">I'm</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">William</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Wallace!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="50" data-len="2.2">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">William</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Wallace</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">is</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">seven</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">feet</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">tall!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="52" data-len="2.2">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Yes,</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">I've</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">heard!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="54" data-len="3">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Kills</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">men</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">by</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">the</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">hundreds!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="57" data-len="8.5">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">And if he were here,</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">he'd consume</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">the English</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">with fireballs 🔥</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">from his eyes 👀</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">and bolts of lightning ⚡</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">from his arse.</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="67" data-len="2">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">I am</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">William</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Wallace!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="70" data-len="9">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">And I see</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">a whole army</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">of my Countrymen,</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">here</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">in defiance</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">of tyranny!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="81" data-len="8">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">You've come</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">to fight</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">as free men.</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">And free men</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">you are!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="91" data-len="2.3">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">What</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">will you do</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">with that</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">freedom?</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="95" data-len="1.8">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Will</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">you</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">fight?</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="99" data-len="7">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Fight?</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Against that?</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">No!</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">We will run!</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">And we'll live!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="106" data-len="9">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Aye (all right),</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">fight</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">and you may die.</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">Run</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">and you'll live.</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">At least</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">a while.</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="118" data-len="3.5">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">And dying</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">in your beds,</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">many years</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">from now,</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="122" data-len="5.5">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">would you be willing</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">to trade</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">all the days</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">from this day</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">to that</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="128" data-len="6">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">for one chance,</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">just one chance:</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">to come back here</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">and</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">tell our enemies...</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="tab" data-start="134" data-len="13">
+    <div class="pb-3 flipcards">
+        <div  >
+
+            
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">that</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">they may take</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">our lives,</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">but</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">they'll</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">never take</div>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <div class="card">
+                    <div class="face front">...</div>
+                    <div class="face back">our Freedom!</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Circles which indicates the steps of the form: -->
+<div class="text-center my-3 overflow-hidden" style="white-space: nowrap;">
+    
+    
+    
+    <span class="step" onclick="jumpTab(0);
+                    nextVideo(45, 5.1);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(1);
+                    nextVideo(50, 2.2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(2);
+                    nextVideo(52, 2.2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(3);
+                    nextVideo(54, 3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(4);
+                    nextVideo(57, 8.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(5);
+                    nextVideo(67, 2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(6);
+                    nextVideo(70, 9);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(7);
+                    nextVideo(81, 8);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(8);
+                    nextVideo(91, 2.3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(9);
+                    nextVideo(95, 1.8);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(10);
+                    nextVideo(99, 7);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(11);
+                    nextVideo(106, 9);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(12);
+                    nextVideo(118, 3.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(13);
+                    nextVideo(122, 5.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(14);
+                    nextVideo(128, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(15);
+                    nextVideo(134, 13);">
+    </span>
+    
+</div>
+
+
+<!-- Prev-next and repeat buttons: -->
+<div class="mb-5 d-flex justify-content-between">
+    <a class="btn btn-primary" id="prevBtn" onclick="nextPrev(-1)">
+        <i class="fas fa-angle-double-left"></i>
+        Previous <span class="d-none d-sm-inline">Sentence</span>
+    </a>
+    <a class="btn btn-primary" onclick="player.playVideo()">
+        <i class="fas fa-redo-alt"></i>
+        Repeat <span class="d-none d-sm-inline">Sentence</span>
+    </a>
+    <a class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">
+        Next <span class="d-none d-sm-inline">Sentence</span>
+        <i class="fas fa-angle-double-right"></i>
+    </a>
+</div>
+
+
+<hr>
+
+<p class="text-left my-3">
+    So far so good. But maybe you still don't know the <b>meaning</b> of some new
+    words and phrases. Do you?</p>
+
+<p class="bg-danger text-light text-center px-5 py-3 my-5 rounded">
+    <b>Problem No.3: </b><br> Missing russian translation!
+    You need to look up these words in the dictionary one by one, or...
+</p>
+
+<p class="text-left my-3">Let's solve this problem by using our special <b>PRECISE DUAL LANGUAGE
+        SUBTITLES</b>.
+</p>
+
+<a href="5_dual_subtitles.html" class="btn  btn-primary my-3">Add Dual Language Subtitles</a>
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="../../assets/js/sentence.js"></script>
+  <script src="../../assets/js/rotating_card.js"></script>
+
+</body>
+
+</html>
