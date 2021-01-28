@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ab8c7d169c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/sentence.css">
+  <link rel="stylesheet" href="../../assets/css/rotating_card.css">
+
+
+  <title>Плейер предложений</title>
+</head>
+
+<body>
+  <div class="bg-dark p-2 sticky-top text-center header ">
+    <a href="index.html" class="float-left"><i class="fas fa-home text-light"></i></a>
+    <span>Решение проблемы №1: Плейер предложений</span>
+</div>
+
+  <div class="container">
+    <p class="text-left my-3">
+    Здесь находится наш специальный плейер предложений Ingenious 💡 Sentence Player. 
+    Мы разбили весь кинофрагмент на отдельные предложения. Они обозначены кружком. 
+    Можно легко перемещаться <b>взад и вперед</b>.
+</p>
+<p class="text-left my-3">
+    Чтобы сразу перейти к нужному предложению, нажми на соответствующий <span class="demoStep"></span> кружок.
+</p>
+<p class="text-left my-3">
+    Мы пока <b>не показываем</b> полные субтитры, чтобы твой <b>мозг</b> 🧠 попытался решить проблему, 
+        используя только звучащую речь, потому что это <b>самый надежный метод обучения</b>.
+</p>
+
+<!-- Sentence Player -->
+<script src="../../assets/js/youtube.js"></script>
+<script>
+    
+    
+    
+    setVideoID('SMX29KN9Uqs');
+    setVideoTime(11, 4);
+</script>
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<div class="embed-container" style="background-color: black; ">
+    <div id="youtubePlayer"></div>
+    <div style=" position: absolute;    top: 0; left: 0; width: 100%; height: 30%;"></div>
+    <div style=" position: absolute; bottom: 0; left: 0; width: 100%; height: 30%;"></div>
+</div>
+
+
+<!-- One "tab" for each step in the form: -->
+<!-- data-start and data-len contains playing times for each tab -->
+
+
+
+<div class="tab" data-start="11" data-len="4"></div>
+
+<div class="tab" data-start="16" data-len="6"></div>
+
+<div class="tab" data-start="22" data-len="4.5"></div>
+
+<div class="tab" data-start="26" data-len="6"></div>
+
+<div class="tab" data-start="32" data-len="6"></div>
+
+<div class="tab" data-start="38" data-len="7"></div>
+
+<div class="tab" data-start="45" data-len="4"></div>
+
+<div class="tab" data-start="52" data-len="5"></div>
+
+<div class="tab" data-start="57" data-len="5.5"></div>
+
+<div class="tab" data-start="62" data-len="8"></div>
+
+<div class="tab" data-start="70" data-len="6"></div>
+
+<div class="tab" data-start="76" data-len="5"></div>
+
+<div class="tab" data-start="84" data-len="5"></div>
+
+<div class="tab" data-start="89" data-len="4"></div>
+
+<div class="tab" data-start="94" data-len="3"></div>
+
+<div class="tab" data-start="97" data-len="5"></div>
+
+<div class="tab" data-start="102" data-len="6"></div>
+
+<div class="tab" data-start="108" data-len="5"></div>
+
+<div class="tab" data-start="113" data-len="3"></div>
+
+<div class="tab" data-start="118" data-len="7"></div>
+
+<div class="tab" data-start="135" data-len="6"></div>
+
+<div class="tab" data-start="141" data-len="5.3"></div>
+
+<div class="tab" data-start="146" data-len="5"></div>
+
+<div class="tab" data-start="151" data-len="4"></div>
+
+<div class="tab" data-start="155" data-len="4"></div>
+
+<div class="tab" data-start="159" data-len="2.5"></div>
+
+<div class="tab" data-start="162" data-len="3.8"></div>
+
+<div class="tab" data-start="166" data-len="3"></div>
+
+<div class="tab" data-start="171" data-len="3.2"></div>
+
+<div class="tab" data-start="175" data-len="2.6"></div>
+
+<div class="tab" data-start="178" data-len="6.7"></div>
+
+
+
+<!-- Circles which indicates the steps of the form: -->
+<div class="text-center my-3 overflow-hidden" style="white-space: nowrap;">
+    
+    
+    
+    <span class="step" onclick="jumpTab(0);
+                    nextVideo(11, 4);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(1);
+                    nextVideo(16, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(2);
+                    nextVideo(22, 4.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(3);
+                    nextVideo(26, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(4);
+                    nextVideo(32, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(5);
+                    nextVideo(38, 7);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(6);
+                    nextVideo(45, 4);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(7);
+                    nextVideo(52, 5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(8);
+                    nextVideo(57, 5.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(9);
+                    nextVideo(62, 8);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(10);
+                    nextVideo(70, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(11);
+                    nextVideo(76, 5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(12);
+                    nextVideo(84, 5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(13);
+                    nextVideo(89, 4);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(14);
+                    nextVideo(94, 3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(15);
+                    nextVideo(97, 5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(16);
+                    nextVideo(102, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(17);
+                    nextVideo(108, 5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(18);
+                    nextVideo(113, 3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(19);
+                    nextVideo(118, 7);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(20);
+                    nextVideo(135, 6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(21);
+                    nextVideo(141, 5.3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(22);
+                    nextVideo(146, 5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(23);
+                    nextVideo(151, 4);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(24);
+                    nextVideo(155, 4);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(25);
+                    nextVideo(159, 2.5);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(26);
+                    nextVideo(162, 3.8);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(27);
+                    nextVideo(166, 3);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(28);
+                    nextVideo(171, 3.2);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(29);
+                    nextVideo(175, 2.6);">
+    </span>
+    
+    <span class="step" onclick="jumpTab(30);
+                    nextVideo(178, 6.7);">
+    </span>
+    
+</div>
+
+
+<!-- Prev-next and repeat buttons: -->
+<div class="mb-5 d-flex justify-content-between">
+    <a class="btn btn-primary" id="prevBtn" onclick="nextPrev(-1)">
+        <span class="d-sm-none">&nbsp;&nbsp;&nbsp;</span>
+        <i class="fas fa-angle-double-left"></i>
+        <span class="d-sm-none">&nbsp;&nbsp;&nbsp;</span>
+        <span class="d-none d-sm-inline">Предыдущее</span>
+    </a>
+    <a class="btn btn-primary" onclick="player.playVideo()">
+        <span class="d-sm-none">&nbsp;&nbsp;&nbsp;</span>
+        <i class="fas fa-redo-alt"></i>
+        <span class="d-sm-none">&nbsp;&nbsp;&nbsp;</span>
+        <span class="d-none d-sm-inline">Повторить</span>
+    </a>
+    <a class="btn btn-primary p-3" id="nextBtn" onclick="nextPrev(1)">
+        <span class="d-none d-sm-inline">Следующее</span>
+        <span class="d-sm-none">&nbsp;&nbsp;&nbsp;</span>
+        <i class="fas fa-angle-double-right"></i>
+        <span class="d-sm-none">&nbsp;&nbsp;&nbsp;</span>
+    </a>
+</div>
+
+
+<hr>
+<p class="text-left my-3">
+    Тебе не кажется, что изобретение только этого плейера предложений уже само по себе заслуживает присуждения Нобелевской премии 🏆? 😀</p>
+
+<p class="text-left my-3 font-italic">
+    Почему его еще никто не изобрел? Кто знает?
+</p>
+
+<p class="text-left my-3">
+    Ingenious 💡 Sentence Player - это А (альфа) и Ω (омега) изучения языка по оригинальным фильмам. 
+    Это основа для многих других инструментов, которые мы будем использовать позже.
+</p>
+<p class="text-left my-3">
+    Итак, мы решили одну очень большую проблему. Но есть и другие, которые не должны ускользнуть от нашего внимания.
+</p>
+
+<p class="bg-danger text-light text-center px-5 py-3 my-5 rounded">
+    <b>Проблема №2</b><br>Если ты не понимаешь хотя бы одно слово, ты пропал. Не помогут и неточные исходные субтитры.
+</p>
+
+<p class="text-left my-3">Что ж, это тоже проблемная ситуация, но мы снова можем помочь. 
+    Как? Добавив еще один инструмент для использования: <b>ИНТЕРАКТИВНЫЕ КАРТОЧКИ СЛОВ</b>.
+</p>
+
+<a href="4_word_cards.html" class="btn  btn-primary my-3">Добавить карточки слов</a>
+
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="../../assets/js/sentence.js"></script>
+  <script src="../../assets/js/rotating_card.js"></script>
+
+</body>
+
+</html>
