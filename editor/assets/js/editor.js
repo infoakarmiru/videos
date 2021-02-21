@@ -30,7 +30,7 @@ function download(content, fileName, contentType) {
 
 function writeFire() {
     // Add a new document in collection "cities"
-    db.collection("ru").doc(editorVideoId).set(sentenceDatabase)
+    db.collection("ru").doc(fireBaseDocumentId).set(sentenceDatabase)
         .then(function () {
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
@@ -42,7 +42,7 @@ function writeFire() {
 }
 
 function readFire() {
-    var docRef = db.collection("ru").doc(editorVideoId);
+    var docRef = db.collection("ru").doc(fireBaseDocumentId);
     docRef.get().then(function (fireDoc) {
         if (fireDoc.exists) {
             console.log("Document data:", fireDoc.data());
@@ -64,7 +64,7 @@ function readFire() {
 }
 
 function readFireSaveFile() {
-    var docRef = db.collection("ru").doc(editorVideoId);
+    var docRef = db.collection("ru").doc(fireBaseDocumentId);
     docRef.get().then(function (docFire) {
         if (docFire.exists) {
             console.log("Document data:", docFire.data());

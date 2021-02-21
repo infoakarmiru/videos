@@ -82,6 +82,7 @@
 
     var editorPlayer;
     var editorVideoId;
+    var fireBaseDocumentId;
     var startSec;
     var stopTimer;
     var playVideo = false;
@@ -210,6 +211,7 @@
   var v = pageparams.get('v');
   if (v) {
     editorVideoId = v;
+    fireBaseDocumentId = v;
 
     //todo be kell olvasni a FireBase-ról, felépíteni az UI-t, és csak utána mentegetni!
     readFire();
