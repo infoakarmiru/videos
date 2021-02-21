@@ -154,10 +154,11 @@
       <p id="no-video" class="m-3 text-danger" style="display: none;">Error: no video ID found in the URL</p>
       <button id="btn-create" class="btn btn-primary my-3" onclick="createSentence('#sentences')">Create sentence at
         0:0</button>
-    </div>    
+    </div>
   </div>
   <div class="d-flex flex-grow-1 border" style="min-height: 0; position:relative">
-    <div id="sentences" class="w-100 px-3 py-1 border-top small" style="overflow:auto; bottom: 0; left: 0; position: absolute; right: 0;top: 0;">
+    <div id="sentences" class="w-100 px-3 py-1 border-top small"
+      style="overflow:auto; bottom: 0; left: 0; position: absolute; right: 0;top: 0;">
       <!-- <div class="d-flex align-items-center flex-wrap justify-content-between mb-1" id="sentence1">
         <div draggable='true' ondragstart='drag(event)' ondrop='drop(event)' ondragover='allowDrop(event)' style='white-space: nowrap;'>
           <i class='fas fa-bars mx-2'></i>
@@ -188,8 +189,8 @@
         </div>
         <i class='fas fa-trash-alt' onclick="deleteSentence(this)"></i>
       </div> -->
-  </div>
-        
+    </div>
+
   </div>
 </div>
 
@@ -213,6 +214,10 @@
     editorVideoId = v;
     fireBaseDocumentId = v;
 
+    var c = pageparams.get('c'); //a C paraméter egy új course-t jelent - ugyanarra a videóra. Egy új FireBase doc jön létre, benne ugyanazzal a videoID-vel
+    if (c) {
+      fireBaseDocumentId = v+'__'+c;
+    }
     //todo be kell olvasni a FireBase-ról, felépíteni az UI-t, és csak utána mentegetni!
     readFire();
 
