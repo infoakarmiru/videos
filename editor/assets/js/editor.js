@@ -57,7 +57,7 @@ function readFire() {
             data = fireDoc.data();
             $("#doc").val(data.fileName);
             numSentences = 1;
-            locked=data.locked;
+            locked=data.locked || false;
             characterCounter=0;
             data.scenes.forEach(function (item, index) {
                 createSentenceFromFire('#sentences', item);
