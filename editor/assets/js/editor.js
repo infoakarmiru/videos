@@ -57,10 +57,13 @@ function readFire() {
             $("#doc").val(data.fileName);
             numSentences = 1;
             locked=data.locked;
+            characterCounter=0;
             data.scenes.forEach(function (item, index) {
                 createSentenceFromFire('#sentences', item);
+                characterCounter+=item.en.replace(' ','').replace('_','').length;
             });
             showHideCreateButton();
+            $('#charCounter').text(characterCounter);
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");

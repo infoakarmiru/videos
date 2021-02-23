@@ -65,7 +65,7 @@ function createSentence(parent) {
 
 function createSentenceFromFire(parent, item) {
     createSentenceRow(parent);
-    fillFire("#sentence" + numSentences, item);
+    fillFromFire("#sentence" + numSentences, item);
     numSentences++;
     $("#footer").show();
 }
@@ -76,7 +76,7 @@ function fillTimeMinSec(sentence) {
     $(sentence + " #startSecs").val(secs);
 }
 
-function fillFire(sentence, item) {
+function fillFromFire(sentence, item) {
     $(sentence).data("currentTime", item.start);
     mins = Math.floor(item.start / 60);
     secs = item.start - mins * 60;
