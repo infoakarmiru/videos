@@ -7,6 +7,7 @@ function showHideCreateButton() {
     }
     else {
         $("#btn-create").hide();
+        $("#save").hide();
     }
 }
 
