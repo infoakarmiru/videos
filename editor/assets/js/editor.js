@@ -1,7 +1,13 @@
 var sentenceDatabase = {};
 
-function showCreateButton() {
-    $("#btn-create").html("Create sentence at " + mins + ":" + secs);
+function showHideCreateButton() {
+    if (!locked) {
+        $("#btn-create").show();
+        $("#btn-create").html("Create sentence at " + mins + ":" + secs);
+    }
+    else {
+        $("#btn-create").hide();
+    }
 }
 
 function playSegment(start, length) {
@@ -50,9 +56,11 @@ function readFire() {
             data = fireDoc.data();
             $("#doc").val(data.fileName);
             numSentences = 1;
+            locked=data.locked;
             data.scenes.forEach(function (item, index) {
                 createSentenceFromFire('#sentences', item);
             });
+            showHideCreateButton();
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
@@ -106,6 +114,7 @@ function saveChangesFireBase() {
     freshDatabase = {};
     freshDatabase.videoID = editorVideoId;
     freshDatabase.fileName = $("#doc").val();
+    freshDatabase.locked=locked;
     if ($("#sentences").children().length == 0) return; //no sentences to save
     freshDatabase.start = $("#sentences").children().first().data("currentTime");
     freshDatabase.end = +$("#sentences").children().last().data("currentTime") + +$("#sentences").children().last().find("#length").first().val();

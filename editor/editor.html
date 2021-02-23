@@ -65,6 +65,12 @@
   <script src="assets/js/create_sentence.js"></script>
 <script src="assets/js/editor.js"></script>
 
+<style>
+.a:nth-child(even) {
+  background-color: #dadada;
+}
+</style>
+
 <div class="d-flex flex-grow-1 flex-wrap">
   <div style="width: 33%; max-width: 600px; min-width: 300px;">
     <div class="embed-responsive embed-responsive-16by9 container flex-shrink-0">
@@ -83,6 +89,7 @@
     var editorPlayer;
     var editorVideoId;
     var fireBaseDocumentId;
+    var locked; //ez az a változó, hogy az editálás le van-e zárva a tolmács elől
     var startSec;
     var stopTimer;
     var playVideo = false;
@@ -118,7 +125,7 @@
         setInterval(function () {
             if (videoStarted) {
                 getVideoCurrentTime();
-                showCreateButton();
+                showHideCreateButton();
             }
         }, 100); // 100 means repeat in 100 ms
     }
@@ -144,7 +151,7 @@
             restartVideo(true);
         }
         if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.PLAYING) {
-            showCreateButton();
+            showHideCreateButton();
         }
     }
 
@@ -152,12 +159,12 @@
     </div>
     <div>
       <p id="no-video" class="m-3 text-danger" style="display: none;">Error: no video ID found in the URL</p>
-      <button id="btn-create" class="btn btn-primary my-3" onclick="createSentence('#sentences')">Create sentence at
+      <button id="btn-create" class="btn btn-primary my-3" style='display:none' onclick="createSentence('#sentences')">Create sentence at
         0:0</button>
     </div>
   </div>
   <div class="d-flex flex-grow-1 border" style="min-height: 0; position:relative">
-    <div id="sentences" class="w-100 px-3 py-1 border-top small"
+    <div id="sentences" class="w-100 py-1 border-top small"
       style="overflow:auto; bottom: 0; left: 0; position: absolute; right: 0;top: 0;">
       <!-- <div class="d-flex align-items-center flex-wrap justify-content-between mb-1" id="sentence1">
         <div draggable='true' ondragstart='drag(event)' ondrop='drop(event)' ondragover='allowDrop(event)' style='white-space: nowrap;'>
@@ -185,7 +192,7 @@
         <button class="btn btn-primary btn-sm mx-2" onclick="playSentence('#sentence1')">Play</button>
         <div class='d-flex flex-column  align-center flex-grow-1 mx-1'>
           <input type='text' id='en' class='w-100 border-0' placeholder='English'>
-          <input type='text' id='ru' class='w-100 border-0' placeholder='2nd language'>
+          <input type='text' id='ru' class='w-100 border-0' placeholder='Russian'>
         </div>
         <i class='fas fa-trash-alt' onclick="deleteSentence(this)"></i>
       </div> -->

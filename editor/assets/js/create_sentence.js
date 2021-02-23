@@ -1,7 +1,25 @@
 var numSentences = 1;
 
 function createSentenceRow(parent) {
-    $(parent).append("<div class='d-flex flex-wrap align-items-center justify-content-between mb-1'\
+    if (locked) {
+        $(parent).append("<div class='a d-flex flex-wrap align-items-center justify-content-between mb-1'\
+        id = 'sentence" + numSentences + "' >\
+            <span class='mx-2'>"+ numSentences + ".</span>\
+            <div class='d-flex flex-column align-center flex-grow-1 mx-1'>\
+                <input type='text' id='en' disabled class='w-100 border-0' placeholder='English' style='background-color: inherit'>\
+                <input type='text' id='ru' class='w-100 border-0' placeholder='Russian' style='background-color: inherit'>\
+            </div>\
+            <div class='mx-1 d-flex align-items-center'>\
+                <input type='number' disabled='disabled' id='length' style='width:40px' class='mx-1'> sec\
+            </div>\
+            <button class='btn btn-primary btn-sm mx-2' onclick=\"playSentence('#sentence"+ numSentences + "')\">Play</button>\
+            <input type='number' id='startMins' style='display: none'>\
+            <input type='number' id='startSecs' style='display: none'>\
+        </div>\
+        ");
+    }
+    else {
+        $(parent).append("<div class='d-flex flex-wrap align-items-center justify-content-between mb-1'\
         id = 'sentence" + numSentences + "' >\
         <div draggable='true' ondragstart='drag(event)' ondrop='drop(event)' ondragover='allowDrop(event)' style='white-space: nowrap;'>\
             <i class='fas fa-bars mx-2'></i>\
@@ -30,11 +48,12 @@ function createSentenceRow(parent) {
             <button class='btn btn-primary btn-sm mx-2' onclick=\"playSentence('#sentence"+ numSentences + "')\">Play</button>\
             <div class='d-flex flex-column align-center flex-grow-1 mx-1'>\
                 <input type='text' id='en' class='w-100 border-0' placeholder='English'>\
-                <input type='text' id='ru' class='w-100 border-0' placeholder='2nd language'>\
+                <input type='text' id='ru' class='w-100 border-0' placeholder='Russian'>\
             </div>\
             <i class='fas fa-trash-alt' onclick=\"deleteSentence(this)\"></i>\
         </div>\
-    ");
+        ");
+    }
 }
 
 function createSentence(parent) {
@@ -59,8 +78,8 @@ function fillTimeMinSec(sentence) {
 
 function fillFire(sentence, item) {
     $(sentence).data("currentTime", item.start);
-    mins=Math.floor(item.start/60);
-    secs=item.start - mins * 60;
+    mins = Math.floor(item.start / 60);
+    secs = item.start - mins * 60;
     $(sentence + " #startMins").val(mins);
     $(sentence + " #startSecs").val(secs);
     $(sentence + " #length").val(item.length).change();
