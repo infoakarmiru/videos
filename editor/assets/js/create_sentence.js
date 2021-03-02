@@ -47,7 +47,7 @@ function createSentenceRow(parent) {
         </div>\
             <button class='btn btn-primary btn-sm mx-2' onclick=\"playSentence('#sentence"+ numSentences + "')\">Play</button>\
             <div class='d-flex flex-column align-center flex-grow-1 mx-1'>\
-                <input type='text' id='en' class='w-100 border-0' placeholder='English'>\
+                <input type='text' id='en' class='w-100 border-0' placeholder='English' onkeyup='rotatingCards($(this))' onclick='rotatingCards($(this))'>\
                 <input type='text' id='ru' class='w-100 border-0' placeholder='Russian'>\
             </div>\
             <i class='fas fa-trash-alt' onclick=\"deleteSentence(this)\"></i>\
@@ -55,6 +55,15 @@ function createSentenceRow(parent) {
         ");
     }
 }
+
+function rotatingCards(english) {
+    $("#rotating-cards").empty();
+    var tomb = english.val().split(" ");
+    for (var elem in tomb) {
+        $("#rotating-cards").append("<span style='background-color: #999; color: white' class='px-2 m-2'>" + tomb[elem].replace(/_/g, " ") + "</span>");
+    }
+}
+
 
 function createSentence(parent) {
     createSentenceRow(parent);
