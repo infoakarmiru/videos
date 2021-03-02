@@ -45,7 +45,7 @@ function createSentenceRow(parent) {
                   <i class='fas fa-history'></i>\
             </button>\
         </div>\
-            <button class='btn btn-primary btn-sm mx-2' onclick=\"playSentence('#sentence"+ numSentences + "')\">Play</button>\
+            <button class='btn btn-primary btn-sm mx-2' onclick=\"playSentence('#sentence"+ numSentences + "'); rotatingCards($(this).next().children().first())\">Play</button>\
             <div class='d-flex flex-column align-center flex-grow-1 mx-1'>\
                 <input type='text' id='en' class='w-100 border-0' placeholder='English' onkeyup='rotatingCards($(this))' onclick='rotatingCards($(this))'>\
                 <input type='text' id='ru' class='w-100 border-0' placeholder='Russian'>\
