@@ -68,6 +68,7 @@ function readFire() {
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
+            showHideCreateButton();
         }
     }).catch(function (error) {
         $("#btn-create").hide();
